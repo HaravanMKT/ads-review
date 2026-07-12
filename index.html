@@ -252,6 +252,36 @@
     color:var(--ink-soft);
     font-weight:600;
   }
+  .metrics-row{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:6px;
+    background:var(--paper);
+    border-radius:8px;
+    padding:8px 10px;
+    margin:2px 0;
+  }
+  .metric-item{
+    display:flex;
+    flex-direction:column;
+  }
+  .metric-label{
+    font-size:10px;
+    color:var(--ink-soft);
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+  }
+  .metric-value{
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink);
+  }
+  .metric-value.empty{
+    color:#b7c0cd;
+    font-weight:600;
+    font-size:12px;
+  }
   .body-text{
     font-size:12.8px;
     color:var(--ink-soft);
@@ -407,7 +437,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQInsHrzerQf22xIzCSWUn9hy9x1LMU0u12QTAlPkaGuPkIRtTjlLBkl3NNaZuE9i4DeqSUkmOP0-oMo8NHeUUDV56pFCBlkF9teTreyNUxTzJXHQFxI9n7b4Sy35GHz-necHuIQtKd4RlswPPbjVV-LZr_lF8UBt6sQE9qeMQw-UpXbAAOG-loBDVu1DefgP2vg42mrtSwfgh0O9QYqyR71_ol_qUlvNGy2c7IKrkNHKQ&t=AQIuVd_2khMnwlVmPxo",
     "status": "ON",
     "spend": 64486,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 1,
+    "qualified": 0,
+    "cost_per_lead_raw": 111664,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0607",
@@ -417,7 +451,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQI9iCN0DybiutgvEBDQ8v-Lj--CsZjsYHns2h0HjxBWeSQ2x1L7kIYhz1nEIkRtthuqqKZdEep5PvUZORXimVwSy4d5mlHY-mAZnQ_E2V1LdE6gvYVl1S-PA8MHfxX43N4SHxXl_9rFLRLFaQzRn1thxpmwf3n6NhV92h6pWknJRiEcFHV52054gD9nvMd9eNpnDm-8DQmNtJa-1Z_SNZ_z6yQjI003pI_e7kTol_NvLQ&t=AQLseHWLdLuAaytVeoU",
     "status": "ON",
     "spend": 252253,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 3,
+    "qualified": 3,
+    "cost_per_lead_raw": 172098,
+    "cost_per_qualified": 172098
   },
   {
     "campaign": "Path 1.1 Business Web 0607",
@@ -427,7 +465,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJvgDxGNy6l-WNz83yKLQsIZT-BCLMGBuCA-8JvlxxLIkaLO3gipM_lh4tUHdPq55AG1Dy-ExPehjk-_XAMdoFg-hk2jynyHorhzYPTNLMDgX_KdTnSxe2OFfkv8mVEquArCDOPh64Pxrmz2xsYtbqJSGknYYjgrQ-eDBx5Nuop4S6reY0NvjiZQ6-gCBHL-KQHOtBe34eCjIkAY6NwDdxYhGPM2UMIWs2vdMoF8lv_IA&t=AQKoXhibK4zWjLbrUlE",
     "status": "ON",
     "spend": 549651,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 9,
+    "qualified": 8,
+    "cost_per_lead_raw": 262656,
+    "cost_per_qualified": 295489
   },
   {
     "campaign": "Path 1.1 Business Web 0607",
@@ -437,7 +479,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLHJYCnT56FbKDaz_qgWMBgz0YtKX5LjTNgV2uCQHHz9NPY9d4A5JA5X31KnSTKQdCBDbuGCS-YI_TOj_pXLyowS3MQgrdUCB99GK0foFjnxTSSvq5m-Du2rDtQPV2gDTOwAN14YQ94XJzml36mpguxKfcHf2IulpZED4u2KFRe1uOCtfMvxkuzjoga08699W0WszL3-2IBwTaZYjmQ7RUbC089SlQyNE9k2BPuUZ4n1g&t=AQL9Pirkja2uCI9KJFI",
     "status": "ON",
     "spend": 3970,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0607",
@@ -447,7 +493,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKDxCQ-Z2x-FVud6rmEwRVdyt6PGFj2_lmNba9rtjlo_3O8LhHLuJZcQofGoA4S9IzLknkZ6TP2JyyH781orBkZWvz89n_uIuDgso8rE7e-dJNUXPLoaG4ypAUHIHMGwR5c8VxKFjRqgKC6F8L247lvOayn2hVyvm8hlqfs6ld-rYzXe8-ymXFhsoLGVvt1Rdk8cVHMeo4Sa-VGCDVWPbbZFzVLRVCvPvmr-WydCJzJnA&t=AQK6_metSQ972SfsSmw",
     "status": "ON",
     "spend": 71712,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0607",
@@ -457,7 +507,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQL8yLndbMuPNo3orpo62cREwhVJWjgsDHfJ1-SEYWgWKis7mdc9X6Di5KLEMonNC1wTUkxMz5G53qfstOiCpIq9E2LzrwI7YsfAoE7NdA2X4xGhAFlw7rRqmBMFvIiLmjhRL4ORNmkfGAIP-2xP9WjAUDJOq-G6R1NmrY1ri4G4QxFsBXiseNpVSi7RaqWSSbhPD1946X6B0lIvvaIDY35CTuS8TUpYBaqZaQXTHpJCBQ&t=AQJeHVot2VzfWu3eR_M",
     "status": "ON",
     "spend": 173483,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 3,
+    "qualified": 3,
+    "cost_per_lead_raw": 107401,
+    "cost_per_qualified": 107401
   },
   {
     "campaign": "Path 1.1 Business Web 0607",
@@ -467,7 +521,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJnP5idN-a5vsRTrWvOTDI85M5cQEQ1dk00P7heAyXowHSdREZdgIdxdI-TmAbKCMyJs4LZzbRtewLiKSnYxE2TZhmIGwOdlKY1txM-E6qFFv8jvXi7iWDoJgSmIInR2dIqiSvGZYIJPALG3icV3CQRgtrZ9HGj9jdLAXn_VWdF7VNPHKAuiyYPRjdhPgvtm0rUpfIY-D78XfrgRXSmp-geV4c33mGiHdlKV1JselHjxw&t=AQLOswo-MGhe1jqZ3pk",
     "status": "ON",
     "spend": 23967,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0607",
@@ -477,7 +535,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIGcSPIDrk7XFox9pv3SIDej-T-klGKfqCX45CW9M0PaR1ydIUWThUJStSt7j25altNef6QFWi76bQeDFkIbub2l6DemuXybBeDR0NyGS2Hk3nKJHWS3dracoGoLzk_xrveMb0usUXLXqz7g-62h7-bE30vHMHxim_9hXQSOJ5qAc2cspLcY_igDJbL5GMuqI8ezkkxqC8cjpfw15XClqfPuV7L9O6ziB5pZpLMjWbKsw&t=AQJlUUqdjUXQR33N5ao",
     "status": "ON",
     "spend": 3732,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "H1 2026 Path 1.1 Website social - Video",
@@ -487,7 +549,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQI7knWuNm-Sgeqn76mGlb0b1iG1-Gx7yyDseAZjijzC--Kv0JlKyye00xQ8rlM9pA0yI2kbNYbBWsd96_RXy4uLfaV83SXvYxvjrlROne6JliEDGfWLO2RBiNvnc0Pm6m-XqkYhN7uosYOQPQtVoRc5pgOKoQbm1d1M2ygZ7o8UdIwf6-A5JneAWWAcynKt3cN0DkdPzlj2e0UendRS1H3-OdnisgzLLv8vmlYFOAr2sA&t=AQICxoLYUe9lHEEZLbg",
     "status": "ON",
     "spend": 436650,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 3,
+    "qualified": 4,
+    "cost_per_lead_raw": 350879,
+    "cost_per_qualified": 263160
   },
   {
     "campaign": "H1 2026 Path 1.1 Pricing",
@@ -497,7 +563,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKQS3lUhpwyI02FMdeEe2SwYs4D5Gf71GV2-SbOMUzMHlbNX3itKb6I_f8RYK1lsNbd-LGEZc67O0ZwFUr2gGfKLpg7eeZlu7hg7BL7ao6K3tNxM-NBCxBcxIZODBmlVAHaKQvFzmmEY-BG3djpWDIpj2x_bo-l4gCHphd-1X7kMQUBfzRmpi1_iHBJBJ6t2-3ejwS9YvNwq42MsvMtlMk_xgw4l3Wr4DmPDe26KWA5bA&t=AQIitEPI8uU4XiUfVKQ",
     "status": "ON",
     "spend": 3877269,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 27,
+    "qualified": 2,
+    "cost_per_lead_raw": 332285,
+    "cost_per_qualified": 4485850
   },
   {
     "campaign": "H1 2026 Path 1.1 Pricing",
@@ -507,7 +577,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKLbqjirSuDg1ig0-UTctcqFLhrwb0lV5gfhx9pOo95b97kqoKuriVkO94V3JAZdMkTa9Mfj_75I5uw1HkksDom6_A-RPUfvzq5Fw0EInq1VH7At4F18Tqxq9SabudYtrleZ21HCjsgDNusbWnNl_Ml52v-Ddq2NSLQsaXgdRfTB3j6n0PzXEPtYKn2fz0Y92oOj2vVod7sekQs7N8vPU5psTYk_LuLx61UEjabIUtWZA&t=AQLX5vdPz5NMWzIYGfA",
     "status": "ON",
     "spend": 11775123,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 52,
+    "qualified": 18,
+    "cost_per_lead_raw": 338952,
+    "cost_per_qualified": 979194
   },
   {
     "campaign": "H1 2026 Path 1.1 Pricing",
@@ -517,7 +591,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLIM_6FnDvm6gFFVYwrxMI95rhMEDKWxypGLZqWj9vogZ01lwSSQhutHFJbZisC9NkTATRW8XHjOsrTu-qJoVvfN4AiA-vf23vkGr6YIcEd_ss6qWH0FE9S9ljT1xR4iZ4Z2Uxrd7HgaatCaSFQPj1ctrRYMxm5jHhUzdPLXBAzmUfygHXS6u0wLOTGFFJmXT6vtajOQR7DF3k2zPa_kUoMrRHFGbbBLnyI5X9VPd-Ebw&t=AQIlSSiqf98qfL9p8JU",
     "status": "ON",
     "spend": 5998593,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 15,
+    "qualified": 6,
+    "cost_per_lead_raw": 521770,
+    "cost_per_qualified": 1304425
   },
   {
     "campaign": "H1 2026 Path 1.1 Website social - Video",
@@ -527,7 +605,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLcfWASlqNQV4JT528THxnZpZPpRqDkmNNcyCc21IQXX9kRkcvuk2VacUYFn5RmFOOLIt78O4dvNvt8pPd8woNzFIl57DlwhP1oz8KYKXALqBNsQIuuUlQvl25I5vksB1Roh8YTDJEgPgvnyf7ofzpekdYeym2q3SodfwswNftBU_VRHnS16Ymxs4MYy_YGO49jerpMANrK9AhfECh37-nzfkggHCIHxioY7SciW9RY2g&t=AQIS_7fji2dBSx6ZqN8",
     "status": "ON",
     "spend": 23172,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "H1 2026 Path 1.1 Website social - Video",
@@ -537,7 +619,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIfilJL9jc_S_axDzEHvsQSZQg4HLqnluQiL9uvi78sQhFCA76Q3DfwbI6vFVTfnpvVpzgjUaj2wiTBdZFCNuNDP2KBpXppb7EABI6KQV41FwutvJh-fot6yCI1ayovrpqeo-hPbBsEcaSMyKg0w07aZ6VYeIf00AiITGouLhsRrJFEIxlmxzWwP53ufWO-eOxSw4qQbW-JMUYQ3hdR6BJkxhwaEuSQq7NDlqsfjttWVw&t=AQLdM0XjgPz0Z_Z4Ko0",
     "status": "ON",
     "spend": 8119814,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 49,
+    "qualified": 12,
+    "cost_per_lead_raw": 270222,
+    "cost_per_qualified": 1103408
   },
   {
     "campaign": "H1 2026 Path 1.1 Website social - Video",
@@ -547,7 +633,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJ6V6BTUEtlSlbAqNX3VvGA01n9LOUu3WpqgKsWK32K9eryDt48F1BN2wW5a7VaqagNL2T4QHfvyviumA8nGlGc1IOCzJ1rCU7lBYXCarDqoS-wNifFxmSoDNE7r_kcH99ILaJNVhbQw3OiBpqE2fadJ-vq7UoOxn8qgli0Bk5u1M1Oh7K0OZSFVsDhHP_mmzg-1AlOYu-g0Jy1JbQZgE2Lh0yMdG8FUIckibmlgP99Yg&t=AQKoG6btz2VlYFGFX0E",
     "status": "ON",
     "spend": 4713436,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 46,
+    "qualified": 3,
+    "cost_per_lead_raw": 197118,
+    "cost_per_qualified": 3022483
   },
   {
     "campaign": "Path 1.1 Omnichannel - video agency",
@@ -557,7 +647,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLAifykXhwotbO5_GTwq6RjbEX4QgJi1qL_y2I4WgeUoPjfGd_6DqA3v5-OZsZmC4G7absNKQBljNp1_JWHSoMQPUbIzm3TtwfFMcFibFa4GHH8VDWFTMQ_9xUx6IqaeIw4hStHf98VrK2_USkkoUGi6Y8VmIZfuJkCyVgJb1gIEcNFwAKkcxfiHMG3qUtFYhk4ECjakzBgnvu9fIGoUAPqBZWjkTlpBfOetDeJJTVYxw&t=AQJnsAsuYa6sUQMXhW8",
     "status": "ON",
     "spend": 10165197,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 86,
+    "qualified": 19,
+    "cost_per_lead_raw": 211319,
+    "cost_per_qualified": 956498
   },
   {
     "campaign": "H1 2026 Path 1.1 Website social - Video",
@@ -567,7 +661,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLM8vaItyhwBr0s3mmNZC9PCmB9JK2-MvDGZqSJpi-Lg9rY7Nnsi4suqQ4CWgxLmN_MhNkrg1GamFt7dX0DEad7AziFjioppovdhdCSWLmEMBaH7HrNVT7KviA9JeyN4Jx0v7V5BYNoTwBIQZiuEH25WhtZLpJi4D_R5SMybXPLCQRiFQRF_2UTyHHeZc1w5CQ_xI8upxMIgBxiPywXTK_WKLL9s0xCbKVRGp8X0blILg&t=AQLoXaqN16jhXujm774",
     "status": "ON",
     "spend": 2139,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 1,
+    "qualified": 0,
+    "cost_per_lead_raw": 16565,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "H1 2026 Path 1.1 Website social - Video",
@@ -577,7 +675,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKDIzmhlkSVSPAeNRHWLi7gq0lXn4nsXHwPSRtOz0ntVL4hU63HOv9jqWhgz6OXYNMRv38J0qC1Lfi7YlSfWnzF3q_tkRU3g4ONLP6uvgNVvTtrXj1aRnTbw36qUuVI2Pr2WBWSeW0R4YaxTqz7_hiUaT3MZ3JJvz8Z4x7B3EIbOLMRJ8VQB6qvM8QYmjyQ7WhWXdgXoG4T3Dp2RG87urgYPVRnVVpah4EY4p047c8xaA&t=AQLiIhcPUOUnjzexC-w",
     "status": "ON",
     "spend": 16446,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "H1 2026 Path 1.1 Website social - Video",
@@ -587,7 +689,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQL7VeaYSVDQhzrVKdfo8edoNsRL3-25pV8YI3mqmlZYv-ArlaTQJ6V2pi5BUE4Ho6uWgv6Pvuga2v7W7h8_7-PSbDnO2x7NlswOuMdu8Rkzg8GjlwCzXagJ-XTr5bARA23pObKmHD5BVR_jJDoDuYecyjcZnizRM8ZYkN4EXUVeNmo5LXmEFVj7sye2dRhEUazfpeDwRsWkMSxeED4AmkFwu14EMpjPTJOg8LyXcAZQPg&t=AQKWQNjWwYvETlNbres",
     "status": "ON",
     "spend": 168100,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 2,
+    "qualified": 0,
+    "cost_per_lead_raw": 156318,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "H1 2026 Path 1.1 Website social - Video",
@@ -597,7 +703,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQL4omCz-nFzXCcPkXrkQqIZbEWgyxD-oSm_1zrDtlZCQv2MZ5wruA0CpS9KBB3CTuSLvXO6-X6ty8yWRj5Qi5DwIOujD2DAmGyRxdb0rQYiyDCB9rHe7gZXAaiYXgBn3KY0Q3Jj5xRbtmRv-J8fLO32rm6tWn4jI6Bdi_fTQsA9_zQT_LZlq4DUpzaJDQ0XBrY_ZY5yKrMeyiGSVxwzEtMeZA23UYzCVt-ufVpiHxaArQ&t=AQJQubxtBjp0JA6Rnvw",
     "status": "ON",
     "spend": 10496094,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 64,
+    "qualified": 23,
+    "cost_per_lead_raw": 274741,
+    "cost_per_qualified": 764496
   },
   {
     "campaign": "Path 1.1 Omnichannel - video agency",
@@ -607,7 +717,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKGaicMhWQ4Km9Gqmxld5x34wTfwxIUVKaxYbqm_-KTFIwD_UNW96r7VqSw94bzLzy4uQHHYVyXi2GxciOge5pfCd3bT6S8_X42qv3kEGDuwpSL3USxC9UHbMXcVTnn3o_9rz0z6_CXFsxCYSF2ZpXWbwjwXTtQK9vulH1nuz2SNz3n4AXDdVucLXH9OrxjAZK03M1ApHSexcER4nOYXX6ypgSwMCnbEYfun5irnu-DRg&t=AQKQR3in9fWf2hW6ioc",
     "status": "ON",
     "spend": 187832,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 4,
+    "qualified": 1,
+    "cost_per_lead_raw": 321034,
+    "cost_per_qualified": 1284136
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -617,7 +731,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIJcFMZNDUQ61nt5z6b0fopjTDbFtpDCTV61b9m4vYlqxNICxQ-adpC3tAl3_LqrJvj26FxYBehGy87QUtpR0VH-DG8oDvxvQEOtrxTrnImm92IBlT-faSXV8zC4x0899T9TiwwtUvpltGLrPbltDQf5wercTaz1jEnZzVepJ_cyC9NchrPvX7wMaZcxFj_m5s2h2dri3vnyvsEgdH6kBX2Nn4cpyVbV_5ry8cqJ72qdQ&t=AQIJsBlvqkMUUb2V7BE",
     "status": "OFF",
     "spend": 717805,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 2,
+    "qualified": 1,
+    "cost_per_lead_raw": 358902,
+    "cost_per_qualified": 717805
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -627,7 +745,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJnoluXUCrVFse8r8AWCNfN2N9xV1gtSlL3upTyJ5krn8exwxk4zXCb4hOY0LfP0lmivk4LlwtMimM-HgCW-mQ53a4ZtnMBVb57V5p2JJGIwRQ4NXWc34pag_glmTH4kmePc16rpTulfJ1Qo77Bb9uUkN4tbgKTyg-yZSl4bhUWmmufS56QygHmvU1x7gG_BQWZHnc0Lc1SRqIEGXpReQSD8UviF6M5xPWZ06I360dxTw&t=AQIDGfIgS4tCQZkkv38",
     "status": "OFF",
     "spend": 2918958,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 16,
+    "qualified": 3,
+    "cost_per_lead_raw": 182440,
+    "cost_per_qualified": 973011
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -637,7 +759,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKqJTu6T9iUQ4KX5tvT25DxsYy_YyyassaLq5P_63F0kgSlk-z0V7i2CtU32m8Y9lHziX_E-UzYww1lMOkwmao0QYcEApw9TmXO_-35by54ZEYY1gZ6J4wyxcuUJmuVcg8RdMgjzV8SGVP_9yRaDmSPkrO5bLQXOul_iXtZCz0OVS-wXL-imOdwri035-tygOQ_NasQTbjEEbiKKZvXynQ6Jy_CDMXIrzDUN-P_Ehz4_Q&t=AQKusipHnFx3juq-hRA",
     "status": "OFF",
     "spend": 7260,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -647,7 +773,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJIbJF7A4LNP035Tnb9vSuMgGDuH0mSv1jJa8dVSJo468dr12Evxizdj9PzZs-rJe91TAsZr8xb3cdmTEi8G1G5YXMBaWHXMmfFdkDbIE0FEIkb74PuzxlAAGMTKTBiO-3HW1_pSuDYspqBlTE1Iv1nOdnqTil8EZY7iCPy_sIqXzZ_bu_SkMcd7vnp3qiJUb1wSSAdhw0g3Zp60jz7CLyDuB-gVbCzs8BCwRP51xJ9Vw&t=AQII33AFr5tOHWQRGJw",
     "status": "OFF",
     "spend": 3608,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -657,7 +787,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJuRjIO5QtM5o3kZ3xPR2eLPqigyeyNLob-VUyKIi00w3x1u6Pap4dQdfH_GgwTw98lDiQYhXf_S-9GmJiFaoksDJH8s0C_2bR4QxCbgpq4UrCFKWsRwgWZaqcJLyZAjAplGkq_VYpgOg_hd_kwH4axw97J7z2jG5dfdlZf4GJZvE9bIxXxUBtH1XmrhTVSZ52Ux39Koilm7fH0075zMRDD9dieMQlANTqbWR-mGzqqjg&t=AQIflWC1BBpUorFt1eM",
     "status": "OFF",
     "spend": 39084,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -667,7 +801,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQK_R-Mx8EVo4cyMR2VtR_JIiMJRk-RXBVXv6G3MIiamDpxzqnLsy1b7zVeF5r-1B8CMrNbwRZtI5mIBJMKYUhrDH5N0f6reL6RB74MKBxJCpLN-yFIDsboh0VjmD44NhUVMrNi1jldq2GswqgvTefsVHwVR3y2op25BZsVK068X-LbkpM1EGuGZ41AYQZYLR1GxbdKJKUaIukmd1j8t0ZX6tNwXfgvrKz24AY2VLZe7OA&t=AQL4Bb3Rz3OthhUUlRI",
     "status": "OFF",
     "spend": 30412,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -677,7 +815,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIj0X6pZ-vXyfurZs-F2_XegH7JRQ2nNu2W8mty9UM_94RF43Ndeq_mTL0l_O400oCecX7FpP2q7zzU7Z4rKoJOTpmWDoWmiRygWz8mQ1sEnd8V-1LLr73BlpkamGaoUxGutOGQOuHgEF7LQEKfP_jbDhPKaNqs8xc575zfCo6N3xhcIhGVTgDai8PDIRKM3xWBaneBb8S-MTqtmxxfATVZJLMl9g-0QRM0qLLiAxK_wg&t=AQLOVG8KoLOr_kfQa2I",
     "status": "OFF",
     "spend": 20692,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -687,7 +829,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJN4KZyEVNUtBZ8FMO6I_M8dJjIbVuNtTxI-AmlgEx6TD77cNT7TBF4VFIlY3hCgCJohblGl1Ya9Yyrq3KMqxPXJA7JgvaDBSMCVnxRyF9Vyz9NcxQG2MQ9EmxtkM-Y8M5V_xJkKzcFnMfoeEfjEcR20DgDvKNUGRc5BbRSvET3b9ZqmK2D-YAXmIj1whb58myJr4LCTvWhIY82ah1i1ppK96iq0jQsJh0QewI0Q_Qp1w&t=AQKKeIEUFaf4y35A3GI",
     "status": "OFF",
     "spend": 94275,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -697,7 +843,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJzLQwqMB5bou6Qr-G2jorrLbBjecUixTGLV3l7ZO-S7_L05jm34odZhaCxHY6DI7pDmr5XSuP_zO3vFpe6LEJB6-B9mHjr1njSSazNOjq0tyeF6OHh2r8nfKgVN-HQfZIj-JY9Do3fW0_EXSil_3uncnvBbc9jsC-Hn2aE9bsmAHeilUQ8-STJ0hzk76l7S97BRyPX0rQS_iMayeR4U4awAsnrHqFtoxyFymMcDuRZdQ&t=AQK7SGQ3eohGKp3XmvI",
     "status": "OFF",
     "spend": 335,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -707,7 +857,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKXhi580kZJcGxFZSviOIN6r1IqhMVe-i0oAI-8bdlsSHOQDAzmM-w3UWcarHtF1eyyj1kgBSUjJhjDY0Z52AdcyE1C6wd-dnVXOZs6mDC2MVDRQd7dtnElPl5iMFIzHcrRdxiyiAh8AH6pbDG-A5krKJX3vSJrvWC4DWkuHaqWIo7zAjtpDIeiB1F7YzScrF4u9EH9OcrTiBYsLgDVXzd-pNKt5kuRNbl3tH30Txvx6w&t=AQItym0x4IEKoO-ErzE",
     "status": "OFF",
     "spend": 14149,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -717,7 +871,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKb6rUUF-HId3i11p9tGnrNTE14tC8Y0BZTGhcUbDKC_zPmj202s1gJzezOYXBvlP3N88QjsxE5AGBnmuP1x8Ay4QheUcFNJgj5mhN6vvJK4xgV0I1uZAiHBu2OMfx8Mmz-lnSXli6Ka3GDVWF3nlqIfUPRG21hm-outx3eJl9mHH6qTG5LfYl70hM9Sp5KLLY2Mm3Rw6P55SWrZ4JcGMLOOv9-e4qroNIrxyCtNNLTCg&t=AQK7N2fMJd1_4zvP8-s",
     "status": "OFF",
     "spend": 48104,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -727,7 +885,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQL33O-sXc3sl3E-B2T6HKmyntLp-8nMoaUEpPZgVW1hBefSR6qZFiog0bZfMgx7lr79_1kSqCdYyWNBGXcPzTgeLNr3Wpd7rabB_1ZTx4UUhFg3-xmqPjpc7XDAIsXxF_SFqxPTzCP-5yoakEi4FsrdOTpwfl8tKQAtTKsycZM_873WZN1mn9DLNKEaZJcsIKztjuDrosVLWyVPdqj707_FsFbOBlaxx4qNnDD9ZPpZlA&t=AQIO2k8nGtB_PImlxAk",
     "status": "OFF",
     "spend": 889,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -737,7 +899,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQK7hOZx6x2wkrJ5WI1-FbUohLGdHz_ZqUPmjKUIRUsEGmIW1L8Qyj3Q7YRpmz0xFaEXosjWbcrkfXJcRP6yNtgM1n_UQKC19EXeO6sni4G8eUAsDfCR9LoU8FPPG4UhYH1azT8EZmIlZ0LfHDjwY4IXZdAWX5yUI1x9hzSc1fO0HykmH7r56BwXgmJ_8idvPyaBlG3lvQEaHlx57FiW7f5mANjGg_ZEW79Sp5fiF3iggQ&t=AQIagz2OTGCOcOorpLY",
     "status": "OFF",
     "spend": 1820268,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 8,
+    "qualified": 0,
+    "cost_per_lead_raw": 227534,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -747,7 +913,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKbKDkmwy3Z7P1-2zDCfxo2A5DFagnxuak3gss3tyJAmOxyZ02wY2lb4-mG5YdjDakPK_N73jbc5BlWgH1eWLciKzLDXWgxSwmVbwktBukQLLjx9823wqx8m261Rvy-UZlmgPVdcNVLAy0SC8qD84u_ruUjnOqk1_9X8zzrh1losyq5YNmNrEfYWK_E5hq5pQRRD0g-J3wQL822vVnLd_-zyPDftv5hlMfk3nZHh4gIzw&t=AQK7XxScICg1xOuJrjA",
     "status": "OFF",
     "spend": 17146,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -757,7 +927,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQL3Z48yDhhXgOtPYJxzGik5UJOcdMgMc3pQK2_sbHe9mWzcw_G6vpvRgcvsjupyzB2Oizf9hUPPchWhKKFujL5lfFE5sw_EfPBLTw99-MCzBdzMqhN5WOrSvhhXXbY2YadFaZ7UcsOwW9yjfRtYMo4_wCboBaGrWGonN-2kQ8o2SlekvPoKJMPFaa5TEdCorZENQmWjJyMPUiK20-_9TicqkmcoacBxkQVy3cvU0K1c1A&t=AQIQBzteyax-4N7N42M",
     "status": "OFF",
     "spend": 33256,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -767,7 +941,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIew-3w2ObKecZKgNedJRgBAZU1P3MDtwk1NTizkcxV6c21MyfL7dmyCXzSjwVD8eRP_OPYc6A-pEzslyq1bBFLU_tQtnhP1fNUXdPN1ZzfexW1uMzJBLjYnsb21MHPe0U67mhkbkW1pby0iVt0dKHSNosQwg9HMD1x71sMn3ejm1vKf8JwME3c9c6WiMdIdKxQjs3HrLjl8nbFoWXbzSNg78nT-OEB_wJ4FVVgGt50DQ&t=AQKydxr2qS1nu_jgFH0",
     "status": "OFF",
     "spend": 80670,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -777,7 +955,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLMHQ2_hnpk5BzayqlLxnWW0XWim66zTwEe4ezTvVtZ_JcH76OBEMYCilec5Sf5DpVPdEZzeHzW8i3zUzpq4FLGMKlrErAeuK3jycw3wgpEZukU7w7mnu5hnNF5N_6ccJIx8tifUxdnF0Fkmhf-TqGDDpau60HarCJFKmVbMQFa39FTzoklcB4KWPtoKVwoewCimxbQ4Ch9rynNBY_MadXfxCVClhvUUe9DJq6A8e3kRA&t=AQKiClE3JjbnWoWJw3A",
     "status": "OFF",
     "spend": 25191,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -787,7 +969,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIXHfJpJSGV_xioYlMXULRO0XJRaLyb_xZzFQzHZ1sGcAQ7fWRoaB1wRowAl6YsC_TK8pb4B_y4RjtvBBYW1-bZ-1Vj4ZdplW-wEkUbk-cGiuJAoKSXlc5yJ3GxVfQn6QyA05DxsekXlXWs5T_iUZMpkGUpxNZzgh6YNmBx4sTnMvo-y6fnrvgsU__woJVPV25KXgvLHiQ2mGakgI80PAWXA_1JGpgCfcvbNv9Clx5DcA&t=AQJj43UXBdWevIKh0uw",
     "status": "OFF",
     "spend": 8343,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Omnichanel 0107",
@@ -797,7 +983,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKikvSUaa4vNa3PrJYFeXkDkMD78ZrhQ7yNLWG1NXKvlAFQhPcx3eny37o8lMh9Ct3osAfgLTUBEVJJoxJ5g8OKSAT5bUgDQM0EBEKCOZ7sB9UAxzFLjagF6HWrAhia26q0XuPB_WohFr0BjKs06Bgm_mj2iFD-e_Ql1pwkdGzF-ni2woopoLRPwJaAlrDmPy3WqlmW8Teqnh53NnaTjT4-YeuwN79h-WR9PB06U3ZCwg&t=AQIqyOEzxrj63MYcekQ",
     "status": "OFF",
     "spend": 106472,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Ecom Website",
@@ -807,7 +997,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJzUa4uKaJzsTkbDURjb6hZw3MymNRqgfYQoNTJANzvcHDWbLjmAOqqETXb5oyaaNJ0mFefHp9Niy1xnVh_e4d_QKCSS3zG4MRC9Rkm_e-QXLgzRHNDaztflycdF5oqCj2ybkDrFKchRszMFhLKrO-RyWNLN3hoCUS48W2aSmRw0R3CCYpTLQFt2HKlx5Du-z-TWnCjfJwg35iaVJiU8kiP9PkQPULnxP0nwTYwBJwUdw&t=AQIWKnrBGJTdW02ZOhc",
     "status": "OFF",
     "spend": 71868,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Ecom Website",
@@ -817,7 +1011,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJg3WloXcMZPg-PK9At_-erzG8_MpCuef2KwsAxboOc5vYboMMZeLyTotVDVkPtvQR-iXbBvCBp9pOdkZP9PArTemgN905spuLDQ5tOd2i8IDiJxNcyAWc-7kiTYOqqvSL-l2y0S-Mr_sDR3l3Yw4bTtIB80A_fEvghQsKeLIqzMva-aT8BAdJQHLed0AG_Baa7_3ZEZFEbdcRUSMDu7rLmf0PEdNmpo8WYa-BiPPmKSw&t=AQKKaIRoFdCdOxnKncY",
     "status": "OFF",
     "spend": 498484,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Ecom Website",
@@ -827,7 +1025,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQL1ZfR0s1ypjRP1CsgFfnoVte_9UnLjSmCkqPG4nA1A3zN2rlgpvS42AeKX4uYm36eQsqQDCtk2zKfBVzDt2Fxx_d89aZPt4DeHow8B_X-gE8xRd5mdhf43LhqMmW3o6ZVaqRYKc_AaIWatS3-uCXBXNqyAnzl0KAtmVLe5H_TdKXyhA7OL26_X9VtglWhiE4VH4HsiJYQ5LeY6fNxPTpPmNmZOGgoMvk9QYa9S_14YMg&t=AQIjkE-QpWnksteheHA",
     "status": "OFF",
     "spend": 2158,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Ecom Website",
@@ -837,7 +1039,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKDpyvYGRQ8TNhC7lM4ZbrYgEWs1blrcWqbYcrhIFKECpD45OKhgNuGDSD3kFfQtHS5x1uhYTU7LCIT-QTiaaovUSLGNwCA5wtJPu1LR1RGhTZTk27MPSIB218k8DSesNTFdsFwG5wOTIJN1snxVvwYVZnL20CfRMFrqK4PgWl_C4rsTPWrxQgvGwavqPt4I7xi1_qCySk9gWorGGVYN_WW4DJBAzwxP0nqi0N7fZ2yfg&t=AQJNP5n-bpKl9cyw2yE",
     "status": "OFF",
     "spend": 638107,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Ecom Website",
@@ -847,7 +1053,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQK1aU7LVY4GWygx0NZ-whibSPdbM4x-8Dn6ufITDWo0zujTJ2AkUz6vkOalBusm-AkoYyhOAIG4D1X2yGVPlzhW4WZN3GVEogakRqYcKU24fnJ7AQeQjBrKeti4jdL5FPpV0LKrwgf6FN9Mp67u9uSb4HVoovckS9PK8iFoRt2GRzcqmPZjGqg5Xp5MYO3pDQfq185B8d2ISNRGXZxHoPnL1xNBfeK0O4_7yr6CfnWwgA&t=AQKf41dBq0O9eZo4otY",
     "status": "OFF",
     "spend": 107896,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Ecom Website",
@@ -857,7 +1067,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJ85XHpJPKWdgVk_BsUZnGb7ssvEUBu2smzFGgfn9CAe0ux9O16cBrDDyHbvqE7gw31jhUpUyY2MZ_EQrXnQcDvy5sYOVvTkusludoL06YTtCneYLrTC55v-tm5OknAWYqOzJRQadCn5LJIqFHfeYDoyHMXJdLBBbEBvLG9yPSllNkTbf9ASeib9Hx2A_14sDqTB4NvmxSL-klsqhFrDw55nOXjpuTNn2ThSf8XlrlQ3A&t=AQJT0WMn7kPxIlayQZg",
     "status": "OFF",
     "spend": 52296,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Ecom Website",
@@ -867,7 +1081,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLkE5Wk71HSXjHhYyw1fUtIhKJ1wQqw-liJ5WhzKNXptXWqbX9VBBowafAR9gB6JKenaCWG6ts9OkjmnWyQhBl4cap64a44NLoqFs2Zi2teMZflfGM5jnEUQQUYntGynycPeig-06b6q0Qs4BYto4gsvDOyxSdB8or01tmC9unP79SmkCckYhoJ5TGHbJrKp86tAMl4AVuQBGWRC3i3LQe7F7tqBgGM8TMrgaHhJSV-rg&t=AQIlY4s3IDEuADLWHaQ",
     "status": "OFF",
     "spend": 113196,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Test - Path 1.1 Website",
@@ -877,7 +1095,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQK3JwEosn2daKdIFmxOpvxTaXACB0ODL__54hFAXU-ENGQXvGDW0FqcxdUIO40rfA_hYcaops_Ap11_ngwHTom_jcWCNXfJ-WHmZBik3kpStJFYVoqV7rDS-IWNaNbzPeCwqCxwqCJr9lPq1e1n7MTgm5BQgvbrtqTTefkVuA3DBI83fQPZrlzUW1HlaYNlD1wEMvBXfp-Eur-ZcMD3WCEOtX-0AzVxfm0-dB4URkO0-Q&t=AQJT1iQ1mciSd9Ht8ao",
     "status": "OFF",
     "spend": 237978,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 1,
+    "qualified": 0,
+    "cost_per_lead_raw": 237978,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Test - Path 1.1 Website",
@@ -887,7 +1109,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJlHy65ZZDMRw7uKegck6vG0Zdvh-FObm9b-r04DcSIkSXg2_mpVEJtgjuFqs0HW_HtOFX3oxoivxTpgldc2t1HBZ0WaxER1RJ1wh3NFK61lA9Atmm1zp-o1nlUVWq2sp9LDjwh1CBwCDb2ipWgbgOGyiOqnUaTS1U3W0kaThcJeArv3gO2SqVqVhA8y8kgGWV313KUI74Bn_OtG4mOqbv1BrDH5vfe5vkQJt2xY92CJQ&t=AQKyCcwzAexxRAOUolA",
     "status": "OFF",
     "spend": 38162,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Test - Path 1.1 Website",
@@ -897,7 +1123,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJvJNG1pOPuO1-TuAkEXTcBA04pDfdVh5T95WmqysPITvo4nap60GOGPCJJj6JGoMcrVNYPaAprGOVtjQ8a3V19CGAs4ErSJ_QU5V9B-WcwkH-srmc5USOpcx8BX2Abscaqa1_mneCrBg4rpjcKXK8CZE3_3ZiL56uE_zZTzDrId3IY_m9q6SDMKk7Dr-kggB9e4AYGC0NCM7sQgachwHBgBcA5egr_MWbWwfjI2jLR_g&t=AQJ5NnWUk5rc6xt_-wc",
     "status": "OFF",
     "spend": 67491,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Test - Path 1.1 Website",
@@ -907,7 +1137,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIiH_v8osmEqwSOz4JV4oE9hcf0eg0sVaK05xSD9_w7HSxDiOpOnLXFtbfxvltzB1FHZxmje9yeIMYK6pxghsRCCmwbYdpskKoAqvoKq5MMwtjM5oYaPQVups7-lZbWsabPU9pBQHc2MekBk4g_JqnBTti4vJZ82IDN0rwzQ7IS5eVJqxmp4ZvzxUzklUxVg0eCKVbCAoJkKHM64P8u86JbNV9D1oqkpRn15iRtaCVOmw&t=AQJ3a8WG850TyzOuCWk",
     "status": "OFF",
     "spend": 880168,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 19,
+    "qualified": 0,
+    "cost_per_lead_raw": 46325,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Test - Path 1.1 Website",
@@ -917,7 +1151,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLYKdC6EwrAtIerx9m_gzNOWyyPCOditDyN3myom91epbrQ9AJdNeQnOMSTIx75NrOdfqyJ9bsJk6K8EKOn5QFVPOGuk-D2zPS3minIOzDDEQLPt3G1aOH6FP31RY8Yucxkd1vF7JVt-2ThqFrTQA9spkSaQjWN3BCyh29psHRqNURXW0-6yKtq3ozLq5hqM_93NT4HFjN9W2QQT8VLIxaNpnhP8sVcf4o-w-gDYM3kJQ&t=AQL2wyZ6H0YMvdnh7n4",
     "status": "OFF",
     "spend": 38592,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 2,
+    "qualified": 0,
+    "cost_per_lead_raw": 19296,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Test - Path 1.1 Website",
@@ -927,7 +1165,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQKP04ff1bKYt1SGD8lNMbD95LGYx4uz337ATr7qbDdq4R7iJpB-2iqzjq867qXA7XrwKODm3LjuQuNeAKbOYAoRb2uvBeV3odXbGkEaawUehyFtWRGcGQ4QegnnWZ8YxI8LjcbS0aYsjwFXvEqRECpZ7t9nqMxuWA9IjpMQhGmR-PWaryrQb0NpT_28WWBSGlCLml8R2FKZmszH4z3q7gEMPxwLeTLOQGKqTZIm64or0Q&t=AQIK8SScie7Dv7AK_bE",
     "status": "OFF",
     "spend": 3213,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Test - Path 1.1 Website",
@@ -937,7 +1179,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLoJsMXyQNvU_ihPyZl89DbsuquQzk7zAPYvbz5ldurF3Mnw8K8At34QsUDPwX9_eIS4sDSf46RCbE6E5w3ZiDnH979TgflLJcbzjdIddrN6ADS50W4KOTDJqXl3vnshfmGFHzy9tjaqlhGg7pyM4yLzGNwAok7ZJRXipi50ltHkpQe2nSlAyA6cV36pseQEUUwdz00zOe9LEi8IFN8oqZxBBmFNzxdNiTvreNTE5KKVw&t=AQLO7pxq2LNl_rooi84",
     "status": "OFF",
     "spend": 392987,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 8,
+    "qualified": 1,
+    "cost_per_lead_raw": 49123,
+    "cost_per_qualified": 392987
   },
   {
     "campaign": "Path 1.1 Business Web 0307",
@@ -947,7 +1193,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQJCsnFiLNxl6m9JsTIuL9uM3e-dwFttPMB3t8bVnP-FFGTJfg5X9UN1JDkI5yhcrvB2McRUFDOgmBmvrqBNWme6jqnDOkXmemK9risnDX8QSDmrFyxZySnPjq7IN38xJR9gyikhHPNgwcRhnCAkvH1MjbrtKD5sswyPSB4hzbnMLvdFFcvrZ0KOd-qS-bjOybFt9clAFhOXzoEYViIhhE5Dt-4rAM7nNiJZkLz6WZOHfw&t=AQI1orWETZ1X_lR2fYw",
     "status": "OFF",
     "spend": 2525,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0307",
@@ -957,7 +1207,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIzcMh_1s62Yff_IEZkYz_Umay7Hxn10z5DThVzJJgw-fWz1yNfHS5Kud0QB2rHeoRZUdWM1MC5_joabrA8l5KIW5-LwiHhdpFDv4fQEDiiI6uVLErVNA1LhISBC4B5stSJrdbePPQXizlIunjag-zgdtnCaYD6RrccyFW0TIt-rbWyKBX6Vhaw3QfwjEWclFKMk13av5pfxrNPlV7LG37ZhzUEA294-Z_0KjnaXuHEBA&t=AQLWxuR3L98NLrZ_ltQ",
     "status": "OFF",
     "spend": 1801791,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 4,
+    "qualified": 1,
+    "cost_per_lead_raw": 450448,
+    "cost_per_qualified": 1801791
   },
   {
     "campaign": "Path 1.1 Business Web 0307",
@@ -967,7 +1221,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLeNu7WKKfifWw6fG3rd_cwRkiojVrCmjNiD4yk9IsW415-s7a1lonUaA5nKJy9GYC_x6Pst2D1DRSarDq-cNLe1xdIjnODFqoefWCfGCMjggbuknJFS6q4DEWMnAoEZWzJqJLx3awtf7J_3Q2b8KtShyhk_Bc5BR5Lvyrfl2LGZt2gnKWRRYjo8jTV5AxBZvXmJ8JHH-8A6Ra8bVdiqK71-qO69P_XoeRJ5RsnMzTQ6g&t=AQIWHR0TeV-wU7QcfSA",
     "status": "OFF",
     "spend": 1023483,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 3,
+    "qualified": 0,
+    "cost_per_lead_raw": 341161,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0307",
@@ -977,7 +1235,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLNzHKOR05UJkkOOesRGjqYk28dcmlWYIHuj4NLqquw0bQpAjIPg_YpQDjLQ_D8OCPWROWOpUrBgWdbfu8dip38QpXke_e619SieymJw1UOL9tp6RC-BM92P1k-OjO3oSNbkIcEIP8A9H3bi_UlHV_A-gwF1gV4dsas5a1xKwWqSi2paMexJxa_TgRrjGQfZZTJvYYQLKIbxq4ff2m3N0bPH2hgo_DOk3N3gZVJOWPdMQ&t=AQL14z59YO5aOzmPlZI",
     "status": "OFF",
     "spend": 11831,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0307",
@@ -987,7 +1249,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLAebf6aFPIjc_p3sBVNHVwbRuKsVxp18Aa4zBTuTmITEyCJZgWVin1ciuui6fvtxx91REYNKwH7SjRElB8fprlGC794r5ZLVgKWT58MnLgI_Aoz_MElRZj_fqcO7YB1euhF_KInLk1IGR_ala6rwrwyeSaSFs4AlCxitSyMbx91oUPiUxhpdtIRnARnP5ozQpK5MLHza8MToIL9H5QAGxYtjSEevKX8MO49zB_IqIDEw&t=AQKOGbj0ilH0dWlMW0Q",
     "status": "OFF",
     "spend": 67934,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0307",
@@ -997,7 +1263,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQI7W1gUMBYmitW8vxOLpkI4ul90bvXOzC8XDk7oV12cpfglFYnNhwxKkXoTmSRUGW1GjU47lVC7mn9MLXZ18M5z5_bkvL9Awra-1yE7gKDlgrdaQELV9e_8ko8Xhc3AxVtpJTP2Zh9a_phnXuQpaxpw6VPjcxjrFvlVPli5Zps14er1KCv_xR-4OmpQ53rA0vfBKcBIVrp_qvf2GRS9UKxoKOu4KzBIy38aeRoQXFzfnw&t=AQK5WfisfkBlwHnUcr8",
     "status": "OFF",
     "spend": 194554,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 1,
+    "qualified": 0,
+    "cost_per_lead_raw": 194554,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Business Web 0307",
@@ -1007,7 +1277,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLGnpjvctFTECluDOGBiuR41hm1GN0f133PckmEywm6YzCQZL6hHzZKhwnqvbIsmD7YAStuVUQS6lEF7JPCiJkz8n2Qqiqou2equ8PXOtefEBjY2v3_1Rp4vV_0F20TuPcu_0lvWEZNm6A7PStbUh4nXEj86aIp_A3XuSi7b-2aWawHa3Vl6PCSNsozsnfwHnC-JmUfOqRug_VV4GluhDKkucHx1wq8deboBxa7VmNZ-Q&t=AQLsZScn9VJkeJ5PVXs",
     "status": "OFF",
     "spend": 74886,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Harasocial",
@@ -1017,7 +1291,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLytk9YvA4ud3Qd14bNtC_qlPm1E5zjN7VAYtDT_Xav2LZrvhWXtvT_t9uUN3LRifWO6Tn_MowPo6OfosZ-WahUmOMdrCsBNKp2Ehs1KY5eGXqcAV5MBMPHx5J1xuWt9qbevZUNGrtcDjdOXdxcHFRJa-wIvOhoihtMuDWJFqF-EL69pbbhE0niaQLZk1-3m1ipdqWDjDqSbexUccw2b7hXDKkzfK_48jp5CoJ4TqSl9A&t=AQInjv6UuwIRmRCO9C8",
     "status": "OFF",
     "spend": 28461,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Harasocial",
@@ -1027,7 +1305,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIZqN_d4yzpYwvRqPSeJTqBYEApLSZ3Ci3y2MK5l4phq5Vl-3zv8mJy4zYsIMUskORjG4zuWsyx4ju4X2eQRHLbSUfaNdKvh7UEXG_BMJ-HRO4FzzPaKJJ2Dv5oVtx2_WtpSIQpmnuUX88fYSl7SJiU-H3Hydv4QIZQaCstG1k0pKWZLLMaHdsf_hwAUstK-qqZkU5geIS57uOSK71aRhZui4I78fjf1ywXR1_omSps1A&t=AQIYjtauF_0sMJxffUg",
     "status": "OFF",
     "spend": 3480967,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 26,
+    "qualified": 3,
+    "cost_per_lead_raw": 133883,
+    "cost_per_qualified": 1160322
   },
   {
     "campaign": "Path 1.1 Harasocial",
@@ -1037,7 +1319,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLmkw7GQSAKxbYzWj13aZGL49tJ8EehbE4vcW_4t4FcaLsaYB1zBkKvZti8sQtGku0o0VG5_l_jpgWivY0nXRvEdn1bUR7tUimaFNrPreB_2bDE1rtPXbnzd91fxtxHL_kuTBZfXoM9_EDmKl06Sz6Fbge7qD_kUVcqbh531Uqy1ZcWeITRIR_YSqA5CdVVm460DSvc5qgWOqo9uJhq2C8F307KDx04B62HEV6rz3YMSA&t=AQJkXTCWz42wePYKmqI",
     "status": "OFF",
     "spend": 163409,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": 3,
+    "qualified": 0,
+    "cost_per_lead_raw": 54470,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Harasocial",
@@ -1047,7 +1333,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQLzlC3xvB77pMxLaPT6uOXOHC3lp7Xjiec3-vAttt4mPRP_Yp4L0itFrWUUWaZeivY3YdpxCA8eCsox_KAv4dX8LjwDRxyBqGf1Jez4ZvczjwjCAEILLf0wEYAPfALhRIzahctHgtRaJGiipCP4ifeA8IhuhlyDxU1KrqQ9A5BNezlHpYRYeNIKHlZQMn1wgtbm0VCS8Qv2NsNjrYRAVG7-Av0Uadvinjb1VUlICKMKSA&t=AQIGYNM63KRFT1d9sbA",
     "status": "OFF",
     "spend": 39624,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.1 Harasocial",
@@ -1057,7 +1347,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIbJCQdHfO3zwfAgMewdZk7Fp3PsOjGTrhar9UmTeGFH-5Cn8EqxettQXOIL4W6Pdxo4wgPZrZVkN89B5k860K6yhEswrzDmelsNtd0y59KpXFcNr7tRioEWRGoyJ8cWqTHipk_iq2cknJqprEyujo6tVVH62v3QQwqXa3KzcisLphxl7psMSW-w-fym5hQxiNlfyHmJlJ8PY7jIdMr-8LzOqHUv8kLirEjATn9N333Zw&t=AQKGGKID1ClOxHZi9HQ",
     "status": "OFF",
     "spend": 9923,
-    "account": "Haravan (chính)"
+    "account": "Haravan (chính)",
+    "lead_raw": null,
+    "qualified": 0,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": 0
   },
   {
     "campaign": "Path 1.3 Omnichanel 0807",
@@ -1067,7 +1361,11 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQI9C-Y2AolFPiR9i9OY5Zppva1yJ9zTmfkXaozlOzM47BNfuP3VbtAwSRour1Sb2k4royN7sYYKckr5GzmuDrshR6cbAH5Xxm878YUj3tamLhhg5sJaFt4EWyBBdtsKNY4ZhO25SWPAhDDg47JWiXNZzWizLsiokSZjGJPOrD4x_CQ6244kXRnLXWrcJslitgAcQKszn8vbyucwDhXFoIXkW8YG9o9imrCogNCSbAGYbw&t=AQINmFML-X5YOXX_6j8",
     "status": "ON",
     "spend": 328585,
-    "account": "Haravan Official"
+    "account": "Haravan Official",
+    "lead_raw": null,
+    "qualified": null,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": null
   },
   {
     "campaign": "Path 1.3 Omnichanel 0807",
@@ -1077,9 +1375,14 @@ const ADS = [
     "preview": "https://business.facebook.com/ads/api/preview_iframe.php?d=AQIZxtXufrk6tocrj_X-Z3z7VMTGba999JCv2H1Q2ydYoKjGchGxp_7_WMvfo3RMlToJghR6q6LQIxNMSPw00KF6aCUuHCP3yjYKskY1X3QZnK_pSM0dU8rT1oMLnpiwIW0PLCHgD1xrzZSKXo28yb6j7aMeYP0o0dX-ZehziL3vrJf8qotWzwT948Rw-j8HRdGbTW6cJug3V5A9fzmLVg_US3298g_BSxTVM5D4kG8IWw&t=AQJ9OgNITShTdF90Rhk",
     "status": "ON",
     "spend": 0,
-    "account": "Haravan Official"
+    "account": "Haravan Official",
+    "lead_raw": null,
+    "qualified": null,
+    "cost_per_lead_raw": null,
+    "cost_per_qualified": null
   }
 ];
+
 
 
 function esc(s){
@@ -1174,6 +1477,24 @@ function render(){
           <span class="status-badge ${ad.status==='ON'?'on':'off'}">${ad.status}</span>
         </div>
         <div class="spend-line">Chi tiêu tháng: ${fmtVND(ad.spend)}${ad.cta ? ' · <span class="cta-badge" style="margin-left:4px">'+esc(ad.cta)+'</span>' : ''}</div>
+        <div class="metrics-row">
+          <div class="metric-item">
+            <span class="metric-label">Khách tiềm năng</span>
+            <span class="metric-value ${ad.lead_raw==null?'empty':''}">${ad.lead_raw==null?'—':ad.lead_raw}</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">CP/tiềm năng</span>
+            <span class="metric-value ${(ad.lead_raw==null||!ad.cost_per_lead_raw)?'empty':''}">${(ad.lead_raw==null||!ad.cost_per_lead_raw)?'—':fmtVND(ad.cost_per_lead_raw)}</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">Khách chuyển đổi</span>
+            <span class="metric-value ${ad.qualified==null?'empty':''}">${ad.qualified==null?'—':ad.qualified}</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">CP/chuyển đổi</span>
+            <span class="metric-value ${(!ad.cost_per_qualified)?'empty':''}">${(!ad.cost_per_qualified)?'—':fmtVND(ad.cost_per_qualified)}</span>
+          </div>
+        </div>
         <div class="body-text ${hasBody ? '' : 'no-copy'}">${hasBody ? esc(ad.body) : '(Không có primary text — có thể là dynamic/catalog creative, xem preview để biết nội dung thật)'}</div>
         ${hasBody ? '<div class="fade"></div><button class="expand-btn" data-action="expand">Xem thêm ▾</button>' : ''}
         <div class="card-footer">
