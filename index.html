@@ -282,6 +282,29 @@
     font-weight:600;
     font-size:12px;
   }
+  .metric-value.crm-value{
+    color:#0b6e4f;
+  }
+  .crm-badge{
+    font-size:11px;
+    font-weight:700;
+    color:#0b6e4f;
+    background:#e3f6ee;
+    border:1px solid #b9e6d2;
+    border-radius:6px;
+    padding:5px 9px;
+    display:inline-block;
+    width:fit-content;
+  }
+  .crm-note{
+    font-size:10.5px;
+    color:var(--ink-soft);
+    font-style:italic;
+    line-height:1.4;
+    border-top:1px dashed var(--line);
+    padding-top:6px;
+    margin-top:-2px;
+  }
   .body-text{
     font-size:12.8px;
     color:var(--ink-soft);
@@ -390,7 +413,8 @@
     <div class="stat-pill"><b>46</b> đang ON (ACTIVE)</div>
     <div class="stat-pill"><b>48</b> đang OFF (đã tắt/paused)</div>
     <div class="stat-pill"><b>2</b> tài khoản (Haravan chính + Haravan Official)</div>
-    <div class="stat-pill"><b>22</b> lượt mua có giá trị (CAPI) · <b>151.939.912 ₫</b> giá trị — đã loại 5 lượt mua thiếu dữ liệu giá trị</div>
+    <div class="stat-pill"><b>22</b> lượt mua theo Meta · <b>151.939.912 ₫</b></div>
+    <div class="stat-pill" style="background:#e3f6ee;border-color:#b9e6d2;color:#0b6e4f"><b>+2</b> lượt mua theo CRM (Meta bỏ sót) · <b>+30.900.000 ₫</b></div>
   </div>
 </header>
 
@@ -747,8 +771,10 @@ const ADS = [
     "qualified": 23,
     "cost_per_lead_raw": 274741,
     "cost_per_qualified": 764496,
-    "purchases": null,
-    "purchase_value": null
+    "purchases": 1,
+    "purchase_value": 12000000,
+    "crm_verified": true,
+    "crm_note": "Meta không ghi nhận Purchase (lỗi CAPI) — xác nhận theo CRM: deal Nguyễn Xuân Ngân, Won 10/07/2026, 12.000.000 ₫"
   },
   {
     "campaign": "Path 1.1 Omnichannel - video agency",
@@ -1579,8 +1605,10 @@ const ADS = [
     "qualified": 10,
     "cost_per_lead_raw": 149322,
     "cost_per_qualified": 149322,
-    "purchases": null,
-    "purchase_value": null
+    "purchases": 1,
+    "purchase_value": 18900000,
+    "crm_verified": true,
+    "crm_note": "Meta không ghi nhận Purchase (lỗi CAPI) — xác nhận theo CRM: deal Dr Pong, Won 20/07/2026, 18.900.000 ₫ (khớp UTM Campaign ID 7000125039428)"
   },
   {
     "campaign": "Path 1.1 Promotion to Web T7/2026",
@@ -1946,6 +1974,7 @@ const ADS = [
 
 
 
+
 function esc(s){
   const d = document.createElement('div');
   d.textContent = s;
@@ -2044,6 +2073,7 @@ function render(){
           <div class="ad-name">${esc(ad.name)}</div>
           <span class="status-badge ${ad.status==='ON'?'on':'off'}">${ad.status}</span>
         </div>
+        ${ad.crm_verified ? `<div class="crm-badge">✅ CRM xác nhận doanh thu — Meta chưa ghi nhận Purchase</div>` : ''}
         <div class="spend-line">Chi tiêu tháng: ${fmtVND(ad.spend)}${ad.cta ? ' · <span class="cta-badge" style="margin-left:4px">'+esc(ad.cta)+'</span>' : ''}</div>
         <div class="metrics-row">
           <div class="metric-item">
@@ -2063,14 +2093,15 @@ function render(){
             <span class="metric-value ${(!ad.cost_per_qualified)?'empty':''}">${(!ad.cost_per_qualified)?'—':fmtVND(ad.cost_per_qualified)}</span>
           </div>
           <div class="metric-item">
-            <span class="metric-label">Lượt mua</span>
-            <span class="metric-value ${ad.purchases==null?'empty':''}">${ad.purchases==null?'—':ad.purchases}</span>
+            <span class="metric-label">Lượt mua${ad.crm_verified?' *':''}</span>
+            <span class="metric-value ${ad.purchases==null?'empty':''} ${ad.crm_verified?'crm-value':''}">${ad.purchases==null?'—':ad.purchases}</span>
           </div>
           <div class="metric-item">
-            <span class="metric-label">Giá trị lượt mua</span>
-            <span class="metric-value ${(!ad.purchase_value)?'empty':''}">${(!ad.purchase_value)?'—':fmtVND(ad.purchase_value)}</span>
+            <span class="metric-label">Giá trị lượt mua${ad.crm_verified?' *':''}</span>
+            <span class="metric-value ${(!ad.purchase_value)?'empty':''} ${ad.crm_verified?'crm-value':''}">${(!ad.purchase_value)?'—':fmtVND(ad.purchase_value)}</span>
           </div>
         </div>
+        ${ad.crm_note ? `<div class="crm-note">* ${esc(ad.crm_note)}</div>` : ''}
         <div class="body-text ${hasBody ? '' : 'no-copy'}">${hasBody ? esc(ad.body) : '(Không có primary text — có thể là dynamic/catalog creative, xem preview để biết nội dung thật)'}</div>
         ${hasBody ? '<div class="fade"></div><button class="expand-btn" data-action="expand">Xem thêm ▾</button>' : ''}
         <div class="card-footer">
